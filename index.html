@@ -144,12 +144,6 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       cursor: pointer;
-      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .lang-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
 
     .lang-btn-active {
@@ -171,13 +165,6 @@
       text-transform: uppercase;
       box-shadow: 0 10px 25px rgba(0,0,0,0.7);
       white-space: nowrap;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.9);
-      filter: brightness(1.05);
     }
 
     .nav-cta span {
@@ -192,10 +179,6 @@
       }
       .nav-inner {
         padding-inline: 14px;
-      }
-      .nav-cta {
-        font-size: 11px;
-        padding: 7px 10px;
       }
     }
 
@@ -293,13 +276,6 @@
       text-transform: uppercase;
       cursor: pointer;
       box-shadow: 0 18px 35px rgba(0,0,0,0.85);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 22px 40px rgba(0,0,0,0.95);
-      filter: brightness(1.05);
     }
 
     .btn-secondary {
@@ -313,13 +289,6 @@
       align-items: center;
       gap: 8px;
       cursor: pointer;
-      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(12,18,13,0.96);
-      transform: translateY(-1px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.8);
     }
 
     .btn-secondary-icon {
@@ -376,10 +345,14 @@
     .hero-photo-large {
       border-radius: 20px;
       overflow: hidden;
-      background-image: url("https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1200");
-      background-size: cover;
-      background-position: center;
       transition: transform 0.6s ease-out;
+    }
+
+    .hero-photo-large img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .hero-photo-row {
@@ -393,17 +366,11 @@
       background-image: url("https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&w=1200");
       background-size: cover;
       background-position: center;
-      transition: transform 0.6s ease-out;
     }
 
     .hero-photo-small.second {
       background-image: url("https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1200");
       filter: saturate(1.1);
-    }
-
-    .hero-photo-wrap:hover .hero-photo-large,
-    .hero-photo-wrap:hover .hero-photo-small {
-      transform: scale(1.03);
     }
 
     .hero-photo-tag {
@@ -419,7 +386,6 @@
       align-items: center;
       font-size: 11px;
       color: var(--muted);
-      backdrop-filter: blur(6px);
     }
 
     .hero-photo-tag-dot {
@@ -513,24 +479,6 @@
       display: block;
     }
 
-    /* NEW: about photo thumb */
-    .about-photo-thumb {
-      border-radius: 20px;
-      overflow: hidden;
-      background-image: url("https://images.pexels.com/photos/2775827/pexels-photo-2775827.jpeg?auto=compress&cs=tinysrgb&w=1200");
-      background-size: cover;
-      background-position: center;
-      height: 130px;
-      margin-bottom: 14px;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.7);
-      transform-origin: center;
-      transition: transform 0.5s ease-out;
-    }
-
-    .about-card:hover .about-photo-thumb {
-      transform: scale(1.02);
-    }
-
     @media (max-width: 900px) {
       .about-grid {
         grid-template-columns: minmax(0,1fr);
@@ -553,13 +501,6 @@
       border: 1px solid rgba(197,161,94,0.25);
       position: relative;
       overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    }
-
-    .dish-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 35px rgba(0,0,0,0.9);
-      border-color: rgba(197,161,94,0.55);
     }
 
     .dish-tag {
@@ -631,11 +572,6 @@
       min-height: 260px;
       position: relative;
       overflow: hidden;
-      transition: transform 0.6s ease-out;
-    }
-
-    .gallery-grid:hover .gallery-large {
-      transform: scale(1.03);
     }
 
     .gallery-overlay {
@@ -661,7 +597,6 @@
       background-size: cover;
       background-position: center;
       min-height: 120px;
-      transition: transform 0.6s ease-out;
     }
 
     .gallery-small.one {
@@ -670,10 +605,6 @@
 
     .gallery-small.two {
       background-image: url("https://images.pexels.com/photos/3731474/pexels-photo-3731474.jpeg?auto=compress&cs=tinysrgb&w=1200");
-    }
-
-    .gallery-stack:hover .gallery-small {
-      transform: scale(1.03);
     }
 
     @media (max-width: 900px) {
@@ -723,12 +654,6 @@
       box-shadow: var(--shadow-soft);
       min-height: 260px;
       border: 1px solid rgba(197,161,94,0.4);
-      transform-origin: center;
-      transition: transform 0.5s ease-out;
-    }
-
-    .map-embed:hover {
-      transform: scale(1.01);
     }
 
     .map-embed iframe {
@@ -766,25 +691,12 @@
     .footer-inner a {
       color: var(--muted);
     }
-
-    /* === Fade-in on scroll === */
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
   </style>
 </head>
 <body>
 <div class="page">
   <!-- NAVBAR -->
-  <header class="fade-in">
+  <header>
     <div class="nav-inner">
       <div class="logo-mark">
         <div class="logo-circle">G</div>
@@ -818,7 +730,7 @@
 
   <!-- HERO -->
   <main>
-    <section class="section hero fade-in" id="top">
+    <section class="section hero" id="top">
       <div>
         <div class="eyebrow">
           <span class="eyebrow-dot"></span>
@@ -860,7 +772,12 @@
           <span data-i18n="hero_tag_text"><strong>Now taking reservations</strong> · Table for 2–10</span>
         </div>
         <div class="hero-photo-main">
-          <div class="hero-photo-large" aria-label="Outdoor garden dining area at night"></div>
+          <div class="hero-photo-large">
+          <img
+            src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Outdoor garden dining area at night with warm lights"
+          />
+        </div>
           <div class="hero-photo-row">
             <div class="hero-photo-small" aria-label="Georgian dishes on a wooden table"></div>
             <div class="hero-photo-small second" aria-label="Restaurant interior with warm lights"></div>
@@ -870,7 +787,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="section fade-in" id="about">
+    <section class="section" id="about">
       <div class="section-kicker" data-i18n="about_kicker">About</div>
       <h2 class="section-heading" data-i18n="about_heading">A Georgian evening, hidden in Vera.</h2>
       <p class="section-intro" data-i18n="about_intro">
@@ -900,9 +817,6 @@
         </div>
 
         <div class="about-card">
-          <!-- NEW small photo on top of contact card -->
-          <div class="about-photo-thumb" aria-label="Entrance or interior of the restaurant"></div>
-
           <h3 data-i18n="contact_title">Address &amp; contact</h3>
           <p data-i18n="contact_intro">
             We’re a short walk uphill from Rustaveli station, down a small yard at Zandukeli 17.
@@ -927,7 +841,7 @@
     </section>
 
     <!-- MENU HIGHLIGHTS -->
-    <section class="section fade-in" id="menu">
+    <section class="section" id="menu">
       <div class="section-kicker" data-i18n="menu_kicker">Menu highlights</div>
       <h2 class="section-heading" data-i18n="menu_heading">A short look at the table.</h2>
       <p class="section-intro" data-i18n="menu_intro">
@@ -937,7 +851,7 @@
       </p>
 
       <div class="menu-grid">
-        <article class="dish-card fade-in">
+        <article class="dish-card">
           <div class="dish-tag" data-i18n="dish1_tag">Signature</div>
           <div class="dish-name">
             <span data-i18n="dish1_name">Chvishtari</span>
@@ -953,7 +867,7 @@
           </div>
         </article>
 
-        <article class="dish-card fade-in">
+        <article class="dish-card">
           <div class="dish-tag" data-i18n="dish2_tag">Cold starter</div>
           <div class="dish-name">
             <span data-i18n="dish2_name">“Grandmother’s salad”</span>
@@ -969,7 +883,7 @@
           </div>
         </article>
 
-        <article class="dish-card fade-in">
+        <article class="dish-card">
           <div class="dish-tag" data-i18n="dish3_tag">From the grill</div>
           <div class="dish-name">
             <span data-i18n="dish3_name">Mtsvadi</span>
@@ -985,7 +899,7 @@
           </div>
         </article>
 
-        <article class="dish-card fade-in">
+        <article class="dish-card">
           <div class="dish-tag" data-i18n="dish4_tag">Warm &amp; baked</div>
           <div class="dish-name">
             <span data-i18n="dish4_name">Khachapuri</span>
@@ -1001,7 +915,7 @@
           </div>
         </article>
 
-        <article class="dish-card fade-in">
+        <article class="dish-card">
           <div class="dish-tag" data-i18n="dish5_tag">For the table</div>
           <div class="dish-name">
             <span data-i18n="dish5_name">Pkhali &amp; badrijani</span>
@@ -1017,7 +931,7 @@
           </div>
         </article>
 
-        <article class="dish-card fade-in">
+        <article class="dish-card">
           <div class="dish-tag" data-i18n="dish6_tag">Drinks</div>
           <div class="dish-name">
             <span data-i18n="dish6_name">Local wine &amp; chacha</span>
@@ -1036,7 +950,7 @@
     </section>
 
     <!-- GARDEN / GALLERY -->
-    <section class="section fade-in" id="gallery">
+    <section class="section" id="gallery">
       <div class="section-kicker" data-i18n="gallery_kicker">Garden &amp; interior</div>
       <h2 class="section-heading" data-i18n="gallery_heading">City noise outside, soft lights inside.</h2>
       <p class="section-intro" data-i18n="gallery_intro">
@@ -1060,7 +974,7 @@
     </section>
 
     <!-- VISIT -->
-    <section class="section fade-in" id="visit">
+    <section class="section" id="visit">
       <div class="section-kicker" data-i18n="visit_kicker">Visit</div>
       <h2 class="section-heading" data-i18n="visit_heading">Find your way to Giorgobistve.</h2>
       <p class="section-intro" data-i18n="visit_intro">
@@ -1107,7 +1021,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="fade-in">
+  <footer>
     <div class="footer-inner">
       <div>© <span id="year"></span> Giorgobistve • გიორგობისთვე · Tbilisi, Georgia</div>
       <div data-i18n="footer_note">Site concept by a friend of the house.</div>
@@ -1266,69 +1180,4 @@
       dish5_name: "Pkhali & badrijani",
       dish5_sub: "Starters board",
       dish5_desc: "A colorful board of walnut spreads, rolled eggplant, pickles and fresh herbs – a classic Georgian start to any evening.",
-      dish5_badge: "Vegetarian-friendly",
-      dish6_tag: "Drinks",
-      dish6_name: "Local wine & chacha",
-      dish6_sub: "By glass & bottle",
-      dish6_desc: "A small but thoughtful list of Georgian wines, plus chacha and classic long drinks to end the evening slowly.",
-      dish6_badge: "18+ only",
-      gallery_kicker: "Garden & interior",
-      gallery_heading: "City noise outside, soft lights inside.",
-      gallery_intro: "Giorgobistve is built around a quiet courtyard – in warm months most tables move outside, while in colder weather the indoor room turns into a calm, candle-lit space. Replace the images below with real photos of the restaurant.",
-      gallery_overlay: "Summer evenings fill the garden – wicker chairs, low music and conversations that stretch late into the night.",
-      visit_kicker: "Visit",
-      visit_heading: "Find your way to Giorgobistve.",
-      visit_intro: "The restaurant sits between Rustaveli and Vera, just off Mikheil Zandukeli Street. Use the map for directions or copy the address into your taxi app.",
-      visit_card_title: "How to get here",
-      visit_card_body: "From Rustaveli metro, walk uphill along Javakhishvili and turn onto Mikheil Zandukeli Street. Within a few minutes you’ll see a small yard and the restaurant’s garden.",
-      visit_address_label: "Address",
-      visit_transport_label: "Transport",
-      visit_book_label: "Book a table",
-      visit_phone_label: "Phone:",
-      visit_instagram_label: "Instagram DM:",
-      footer_note: "Site concept by a friend of the house."
-    }
-  };
-
-  function setLanguage(lang) {
-    const els = document.querySelectorAll('[data-i18n]');
-    els.forEach((el) => {
-      const key = el.getAttribute('data-i18n');
-      const value = translations[lang] && translations[lang][key];
-      if (value !== undefined) {
-        el.innerHTML = value;
-      }
-    });
-
-    document.documentElement.setAttribute('lang', lang);
-
-    document.querySelectorAll('.lang-btn').forEach((btn) => {
-      btn.classList.toggle('lang-btn-active', btn.dataset.lang === lang);
-    });
-  }
-
-  document.querySelectorAll('.lang-btn').forEach((btn) => {
-    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
-  });
-
-  // Default language: Georgian
-  setLanguage('ka');
-
-  // === Fade-in on scroll ===
-  const fadeEls = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  fadeEls.forEach((el) => observer.observe(el));
-</script>
-</body>
-</html>
+    
